@@ -29,9 +29,12 @@ function Tasks() {
         setTotalTasks(count)
     }
     const deleteTask = (index)=>{
+        let count = totalTasks
+        count--
         const copyTodos = [...todos]
         copyTodos.splice(index, 1)
         setTodos(copyTodos)
+        setTotalTasks(count)
     }
     const editTask = (index) =>{
         const copyTodos =[...todos]
